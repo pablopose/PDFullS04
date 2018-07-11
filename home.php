@@ -9,11 +9,17 @@
     //  "stock" => 600
     // );
  
-    $api = file_get_contents("http://127.0.0.1/MercadoTECH/api/");
+    $api = file_get_contents("http://127.0.0.1/MercadoTECH/api/?d=productos");
  
     $productos = json_decode($api);
+
+    $api = file_get_contents("http://127.0.0.1/MercadoTECH/api/?d=ofertas");
+ 
+    $ultimos = json_decode($api);
  
     //print_r($productos);
+    //print_r($ultimos);
+    //die();
  
  
 ?>
